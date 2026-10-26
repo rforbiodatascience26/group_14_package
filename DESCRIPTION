@@ -35,3 +35,6 @@ Description: A simple R package implementing functions that represent
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 3.5)
+RoxygenNote: 7.3.2
