@@ -1,0 +1,37 @@
+Package: centraldogma
+Type: Package
+Title: Central Dogma Molecular Biology Functions
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Carla", "Ruedas",
+      email = "s251157@dtu.dk",
+      role = c("aut", "cre")
+    ),
+    person(
+      "Name2", "Surname2",
+      email = "email2@dtu.dk",
+      role = "aut"
+    ),
+    person(
+      "Name3", "Surname3",
+      email = "email3@dtu.dk",
+      role = "aut"
+    ),
+    person(
+      "Name4", "Surname4",
+      email = "email4@dtu.dk",
+      role = "aut"
+    ),
+    person(
+      "Name5", "Surname5",
+      email = "email5@dtu.dk",
+      role = "aut"
+    )
+  )
+Description: A simple R package implementing functions that represent
+    key steps of the central dogma of molecular biology, including
+    DNA, RNA, and protein sequence transformations.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
