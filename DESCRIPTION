@@ -9,8 +9,8 @@ Authors@R: c(
       role = c("aut", "cre")
     ),
     person(
-      "Name2", "Surname2",
-      email = "email2@dtu.dk",
+      "Lukas", "Beržinis",
+      email = "s263503@dtu.dk",
       role = "aut"
     ),
     person(
@@ -41,3 +41,6 @@ RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    ggplot2,
+    stringr
