@@ -4,10 +4,10 @@
 \alias{plot_amino_acid_frequencies}
 \title{Plot frequency of amino acids across all input sequences}
 \usage{
-plot_amino_acid_frequencies(sequences)
+plot_amino_acid_frequencies(sequence)
 }
 \arguments{
-\item{sequences}{A string or character vector of amino acid sequences.}
+\item{sequence}{A string containing an amino acid sequence.}
 }
 \value{
 A ggplot2 object containing an amino acid frequency plot
@@ -18,6 +18,5 @@ across all input sequences.
 }
 \examples{
 plot_amino_acid_frequencies("RSLMPILRKFYDQRPKAKPM")
-plot_amino_acid_frequencies(c("RSLMPILRKFYDQRPKAKPM", ...))
 
 }

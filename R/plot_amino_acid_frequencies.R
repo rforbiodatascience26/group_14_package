@@ -3,7 +3,7 @@
 #' Generates a bar plot displaying the frequency of each amino acid
 #' across all input sequences.
 #'
-#' @param sequences A string or character vector of amino acid sequences.
+#' @param sequence A string containing an amino acid sequence.
 #'
 #' @return A ggplot2 object containing an amino acid frequency plot
 #'
@@ -11,13 +11,12 @@
 #'
 #' @examples
 #' plot_amino_acid_frequencies("RSLMPILRKFYDQRPKAKPM")
-#' plot_amino_acid_frequencies(c("RSLMPILRKFYDQRPKAKPM", ...))
 #'
 #' @export
-plot_amino_acid_frequencies <- function(sequences) {
-  # Shred all sequences into a flat list of characters
+plot_amino_acid_frequencies <- function(sequence) {
+  # Shred the input sequence into a list of characters
   # and remove duplicates, keeping only unique amino acids
-  unique_aa <- sequences |>
+  unique_aa <- sequence |>
     stringr::str_split(
       pattern = stringr::boundary("character"),
       simplify = TRUE
@@ -25,12 +24,12 @@ plot_amino_acid_frequencies <- function(sequences) {
     as.character() |>
     unique()
 
-  # Count each occurrence of each unique amino acid across all sequences
+  # Count each occurrence of each unique amino acid
   counts <- sapply(
     unique_aa,
     function(amino_acid) {
       stringr::str_count(
-        string = sequences,
+        string = sequence,
         pattern = amino_acid
       )
     }
@@ -40,11 +39,17 @@ plot_amino_acid_frequencies <- function(sequences) {
   # Tidy the 'counts' object into a ggplot2-appropriate format by
   # moving row names into a dedicated column naming columns appropriately
   colnames(counts) <- c("Counts")
-  counts[["Sequence"]] <- rownames(counts)
+  counts[["Amino acid"]] <- rownames(counts)
 
   # Visualize the data in the 'counts' table as a bar plot
   frequency_plot <- counts |>
-    ggplot2::ggplot(ggplot2::aes(x = Sequence, y = Counts, fill = Sequence)) +
+    ggplot2::ggplot(
+      ggplot2::aes(
+        x = `Amino acid`,
+        y = Counts,
+        fill = `Amino acid`
+      )
+    ) +
     ggplot2::geom_col() +
     ggplot2::theme_bw() +
     ggplot2::theme(legend.position = "none")
