@@ -16,6 +16,6 @@ A RNA sequence (DNA seq given with substitution T -> U)
 dna_to_rna
 }
 \examples{
-dna_to_rna(dna_sequence)
+dna_to_rna("ATGC")
 
 }

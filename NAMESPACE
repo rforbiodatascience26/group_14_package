@@ -3,5 +3,6 @@
 export(dna_to_rna)
 export(generate_dna)
 export(plot_amino_acid_frequencies)
+export(split_into_codons)
 import(ggplot2)
 import(stringr)
