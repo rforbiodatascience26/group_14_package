@@ -1,0 +1,68 @@
+---
+title: "centraldogma: User Guide"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{centraldogma: User Guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+GitHub repository: https://github.com/rforbiodatascience26/group_14_package
+
+## Overview
+
+The `centraldogma` package provides a simple workflow that represents the
+central dogma of molecular biology. It includes functions for generating a DNA
+sequence, transcribing DNA into RNA, splitting RNA into codons, translating
+codons into amino acids, and visualizing amino acid frequencies.
+
+## Using the package
+
+First, load the package:
+
+```{r}
+library("centraldogma")
+```
+
+### Generate a DNA sequence
+
+`generate_dna()` generates a random DNA sequence of a specified length.
+
+```{r}
+dna <- generate_dna(30)
+dna
+```
+
+### Transcribe DNA into RNA
+
+`dna_to_rna()` converts a DNA sequence into RNA by replacing thymine (T)
+with uracil (U).
+
+```{r}
+rna <- dna_to_rna(dna)
+rna
+```
+
+### Split RNA into codons
+
+`split_into_codons()` divides the RNA sequence into groups of three
+nucleotides.
+
+```{r}
+codons <- split_into_codons(rna)
+codons
+```
+
+### Translate codons into amino acids
+
+Function 4 translates the RNA codons into their corresponding amino acids
+using the codon table included in the package.
+
+<!-- Add the function name and code example when Function 4 is available. -->
+
+### Visualize amino acid frequencies
+
+`plot_amino_acid_frequencies()` visualizes the frequency of amino acids in
+the translated sequence.
+
+<!-- Add the exact example after Function 4 is available. -->
