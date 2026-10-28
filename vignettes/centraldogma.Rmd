@@ -70,3 +70,20 @@ AA
 the translated sequence.
 
 <!-- Add the exact example after Function 4 is available. -->
+
+
+## Use Cases and Future Extensions
+
+### Use Cases
+The `centraldogma` package is designed to be intuitive, making it well-suited for several applications:
+
+- Education and Teaching: Ideal for introductory bioinformatics or computational biology courses to demonstrate the flow of genetic information (DNA - RNA - Protein) programmatically.
+- Daily Research Workflows: Streamlining minor sequence processing tasks for scientists who need fast, reliable DNA-to-protein conversions on the fly.
+
+### Potential Future Functions
+To expand the capabilities of `centraldogma` in future releases, several additional features could be integrated:
+
+`calculate_gc_content()`: A utility function to compute the GC-percentage of a DNA or RNA sequence, providing basic sequence statistics.
+`simulate_mutation()`: A function to introduce random point mutations, insertions, or deletions into a DNA sequence to explore downstream effects on codons and amino acid translation.
+`rna_to_dna()`: A reverse-transcription function to complement the existing `dna_to_rna()` workflow.
+
