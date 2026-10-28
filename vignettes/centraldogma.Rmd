@@ -69,7 +69,10 @@ AA
 `plot_amino_acid_frequencies()` visualizes the frequency of amino acids in
 the translated sequence.
 
-<!-- Add the exact example after Function 4 is available. -->
+```{r}
+plot <- plot_amino_acid_frequencies("RSLMPILRKFYDQRPKAKPM")
+plot
+```
 
 
 ## Use Cases and Future Extensions
