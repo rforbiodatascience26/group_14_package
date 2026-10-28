@@ -55,10 +55,14 @@ codons
 
 ### Translate codons into amino acids
 
-Function 4 translates the RNA codons into their corresponding amino acids
+`DNA_to_AA()` translates the RNA codons into their corresponding amino acids
 using the codon table included in the package.
 
-<!-- Add the function name and code example when Function 4 is available. -->
+```{r}
+AA <- DNA_to_AA("AUG")
+AA
+```
+
 
 ### Visualize amino acid frequencies
 
