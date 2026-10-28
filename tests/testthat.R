@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(central.dogma)
+library(centraldogma)
 
-test_check("central.dogma")
+test_check("centraldogma")
